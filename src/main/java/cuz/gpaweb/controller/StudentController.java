@@ -13,6 +13,7 @@ import java.util.List;
 public class StudentController {
     @Autowired
     private StudentMapper studentMapper;
+    private int y;
     private Gson gson=new Gson();
 
     @GetMapping("/student")
