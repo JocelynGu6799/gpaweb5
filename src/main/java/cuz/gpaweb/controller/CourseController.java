@@ -22,5 +22,19 @@ public class CourseController {
         List<Course> courseList=courseMapper.selectList(null);
         return gson.toJson(courseList);
     }
+    @PostMapping("/addcourse")
+    public void AddStudent(@RequestBody Course course){
+        courseMapper.insert(course);
+    }
+    @DeleteMapping("/deletecourse")
+    public void DeleteStudent(@RequestBody Course course){
+        courseMapper.deleteById(course);
+
+    }
+    @PutMapping("/updatecourse")
+    public void UpdateStudent(@RequestBody Course course){
+        courseMapper.updateById(course);
+    }
+
 
 }

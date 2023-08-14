@@ -32,7 +32,7 @@ public class StudentController {
     public void AddStudent(@RequestBody Student2 student){
         studentMapper.insert(student);
     }
-    @DeleteMapping("/deletstudent")
+    @DeleteMapping("/deletestudent")
     public void DeleteStudent(@RequestBody Student2 student){
         studentMapper.deleteById(student);
 

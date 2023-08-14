@@ -1,7 +1,7 @@
 package model;
 
 public class Score {
-  private  String sid;
+  private  String id;
   public  String cid;
   private double score;
 
@@ -12,8 +12,8 @@ public class Score {
     return other instanceof Score;
   }
 
-  public String getSid() {
-    return this.sid;
+  public String getId() {
+    return this.id;
   }
 
   public String getCid() {
@@ -24,8 +24,8 @@ public class Score {
     return this.score;
   }
 
-  public void setSid(String sid) {
-    this.sid = sid;
+  public void setId(String id) {
+    this.id = id;
   }
 
   public void setCid(String cid) {
@@ -41,9 +41,9 @@ public class Score {
     if (!(o instanceof Score)) return false;
     final Score other = (Score) o;
     if (!other.canEqual((Object) this)) return false;
-    final Object this$sid = this.getSid();
-    final Object other$sid = other.getSid();
-    if (this$sid == null ? other$sid != null : !this$sid.equals(other$sid)) return false;
+    final Object this$id = this.getId();
+    final Object other$id = other.getId();
+    if (this$id == null ? other$id != null : !this$id.equals(other$id)) return false;
     final Object this$cid = this.getCid();
     final Object other$cid = other.getCid();
     if (this$cid == null ? other$cid != null : !this$cid.equals(other$cid)) return false;
@@ -54,8 +54,8 @@ public class Score {
   public int hashCode() {
     final int PRIME = 59;
     int result = 1;
-    final Object $sid = this.getSid();
-    result = result * PRIME + ($sid == null ? 43 : $sid.hashCode());
+    final Object $id = this.getId();
+    result = result * PRIME + ($id == null ? 43 : $id.hashCode());
     final Object $cid = this.getCid();
     result = result * PRIME + ($cid == null ? 43 : $cid.hashCode());
     final long $score = Double.doubleToLongBits(this.getScore());
@@ -64,6 +64,6 @@ public class Score {
   }
 
   public String toString() {
-    return "Score(sid=" + this.getSid() + ", cid=" + this.getCid() + ", score=" + this.getScore() + ")";
+    return "Score(id=" + this.getId() + ", cid=" + this.getCid() + ", score=" + this.getScore() + ")";
   }
 }
